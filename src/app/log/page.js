@@ -13,8 +13,8 @@ function log() {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    const data = await response.json();
-    setData(data);
+    const Data = await response.json();
+    setData(Data);
   };
 
   useEffect(() => {
