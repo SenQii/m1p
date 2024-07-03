@@ -1,14 +1,14 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { URL } from "../../lib/constant";
 
 export default function Home() {
-  const [updated, setUpdated] = useState(false);
-
+  const [sent, setSent] = useState(false);
   // send them
   const handleDirection = async (dir) => {
     console.log("direction inserted: ", dir);
-    const response = await fetch("http://localhost:3000/data", {
+    const response = await fetch(`${URL}/data`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -18,15 +18,12 @@ export default function Home() {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    setUpdated(false);
+    setSent(true);
   };
-
-  useEffect(() => {
-    setUpdated(true);
-  }, [updated]);
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen h-full w-full">
+      <h3 className="absolute top-0 text-2xl p-8">data sent succsesfully</h3>
       <h1 className="text-2xl font-bold mb-8">dir btns:</h1>
       <div className="flex flex-col items-center justify-center w-full h-2/4 bg-gray-900 text-white rounded-lg shadow-md p-6">
         <div className="w-1/2 h-full flex flex-col items-center justify-center space-y-6">

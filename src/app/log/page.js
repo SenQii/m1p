@@ -1,13 +1,15 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { URL } from "../../../lib/constant";
 
 function log() {
   const [data, setData] = useState(null);
+  const [updated, setUpdated] = useState(false);
 
   // Fetch data from the server
   const getData = async () => {
-    const response = await fetch("http://localhost:3000/data");
+    const response = await fetch(`${URL}/data`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -17,11 +19,18 @@ function log() {
 
   useEffect(() => {
     getData();
-  }, []);
+    setUpdated(true);
+  }, [updated]);
 
   return (
     <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center min-h-screen">
-      {data ? (
+      <button
+        className="absolute top-0 text-2xl font-semibold p-8 hover:underline italic"
+        onClick={() => setUpdated(!updated)}
+      >
+        update
+      </button>
+      {data && updated ? (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {data.map((item, index) => {
             console.log("item: ", item);
