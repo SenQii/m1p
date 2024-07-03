@@ -50,7 +50,7 @@ function Log() {
       ) : (
         <p className="text-xl font-medium">Loading...</p>
       )}
-      <footer className="absolute bottom-0 w-full py-8 items-center justify-center bg-gray-900">
+      <footer className="fixed bottom-0 w-full py-8 items-center justify-center bg-gray-900">
         <Link href="/" className=" hover:underline">
           controls
         </Link>
