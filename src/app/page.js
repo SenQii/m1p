@@ -23,7 +23,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen h-full w-full">
-      <h3 className="absolute top-0 text-2xl p-8">data sent succsesfully</h3>
       <h1 className="text-2xl font-bold mb-8">dir btns:</h1>
       <div className="flex flex-col items-center justify-center w-full h-2/4 bg-gray-900 text-white rounded-lg shadow-md p-6">
         <div className="w-1/2 h-full flex flex-col items-center justify-center space-y-6">
