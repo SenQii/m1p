@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { URL } from "../../../lib/constant";
 
-function log() {
+function Log() {
   const [data, setData] = useState(null);
   const [updated, setUpdated] = useState(false);
 
@@ -59,4 +59,4 @@ function log() {
   );
 }
 
-export default log;
+export default Log;
