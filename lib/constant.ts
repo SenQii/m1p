@@ -1,1 +1,1 @@
-export const URL = "http://localhost:3000"; // temp
+export const URL = "https://m1-production.up.railway.app"; // temp
