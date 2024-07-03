@@ -31,7 +31,7 @@ function Log() {
         update
       </button>
       {data && updated ? (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-h-[80vh] overflow-scroll py-8">
           {data.map((item, index) => {
             console.log("item: ", item);
             return (
