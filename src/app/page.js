@@ -58,9 +58,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer className="absolute bottom-0 w-full py-8 flex items-center justify-center bg-gray-900">
+      <footer className="absolute bottom-0 w-full py-8 flex items-center justify-around bg-gray-900">
         <Link href="/log" className="text-white hover:underline">
           log
+        </Link>
+        <Link href="/STT" className="text-white hover:underline">
+          Speech to Text
         </Link>
       </footer>
     </div>
