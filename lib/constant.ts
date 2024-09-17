@@ -1,1 +1,1 @@
-export const URL = "https://m1-production.up.railway.app"; // temp
+export const URL = "https://ikkg484kckccgos4cws4wg00.naser.cloud"; // temp
